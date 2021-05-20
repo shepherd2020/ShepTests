@@ -13,7 +13,8 @@ namespace Birthday
         public void Identify_WithTodayDate_ReturnPeopleWithBirthday()
         {
             IBirthdayDataProvider birthdayDataProvider = new FakeBirthdayDataProvider();
-            BirthdayExtractor birthdayExtractor = new BirthdayExtractor(birthdayDataProvider);
+            IDateTimeNowProvider dateTimeNowProvider = new FakeDateTimeNowProvider();
+            BirthdayExtractor birthdayExtractor = new BirthdayExtractor(birthdayDataProvider, dateTimeNowProvider);
 
             List<ResultData> result = birthdayExtractor.Identify();
 

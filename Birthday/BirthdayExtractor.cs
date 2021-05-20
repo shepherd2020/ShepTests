@@ -8,6 +8,11 @@ namespace Birthday
         List<BirthdayData> GetData();
     }
 
+    public interface IDateTimeNowProvider
+    {
+        DateTime Date { get; }
+    }
+
     public class BirthdayData
     {
         public string LastName { get; set; }
@@ -25,10 +30,12 @@ namespace Birthday
     public class BirthdayExtractor
     {
         private readonly IBirthdayDataProvider _dataProvider;
+        private readonly IDateTimeNowProvider _dateTimeNowProvider;
 
-        public BirthdayExtractor(IBirthdayDataProvider dataProvider)
+        public BirthdayExtractor(IBirthdayDataProvider dataProvider, IDateTimeNowProvider dateTimeNow)
         {
             _dataProvider = dataProvider;
+            _dateTimeNowProvider = dateTimeNow;
         }
 
         public List<ResultData> Identify()
@@ -39,7 +46,7 @@ namespace Birthday
             foreach (BirthdayData item in data)
             {
                 DateTime date = DateTime.Parse(item.DateOfBirth);
-                if (DateTime.Today.Day == date.Day && DateTime.Today.Month == date.Month)
+                if (_dateTimeNowProvider.Date.Day == date.Day && _dateTimeNowProvider.Date.Month == date.Month)
                 {
                     resultDatas.Add(new ResultData
                     {
