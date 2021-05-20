@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tennis", "Tennis\Tennis.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumerals", "RomanNumerals\RomanNumerals.csproj", "{1DC6F0BB-6096-463D-B605-3F084EC6C1DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Birthday", "Birthday\Birthday.csproj", "{DB50923E-25B8-48A1-9F3F-DA6A801BEF3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1DC6F0BB-6096-463D-B605-3F084EC6C1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DC6F0BB-6096-463D-B605-3F084EC6C1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DC6F0BB-6096-463D-B605-3F084EC6C1DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB50923E-25B8-48A1-9F3F-DA6A801BEF3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB50923E-25B8-48A1-9F3F-DA6A801BEF3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB50923E-25B8-48A1-9F3F-DA6A801BEF3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB50923E-25B8-48A1-9F3F-DA6A801BEF3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
